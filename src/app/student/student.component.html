@@ -1,0 +1,23 @@
+<p>student works!</p><br>
+<button type="submit"  (click)=getme() >Get</button>&nbsp;&nbsp;&nbsp;
+<button type="submit"(click)=postme() >Post</button>&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=putme()>Put</button>&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=deleteme()>Delete</button>&nbsp;&nbsp;&nbsp;<br>
+Student Table
+<table border="1">
+    <th>StudentID</th>
+    <th>StudentName</th>
+    <th>StudentGrade</th>
+    <th>course</th>
+    <th>Address</th>
+    <th>PhoneNo</th>
+
+<tr *ngFor="let item of (response|async)">
+   <td> {{item.StudentID}}</td>
+   <td>{{item.StudentName}}</td>
+   <td>{{item.StudentGrade}}</td>
+   <td>{{item.Course}}</td>
+   <td>{{item.Address}}</td>
+   <td>{{item.PhoneNo}}</td>
+</tr>
+</table>
